@@ -70,6 +70,16 @@ $primary: #0091C0;
   }
 }
 
+.history-hero-area {
+  min-height: 50vh;
+  min-width: 100vw;
+  background-image: url('/img/bedrijf/gebouwen-oud.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 
 /* line 1, _h1-hero.scss */
 .slider-height {

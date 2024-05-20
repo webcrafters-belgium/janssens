@@ -28,6 +28,12 @@ echo "
                                 <li>
                                     <a href='https://www.infosteel.be/lid/183-janssens'>Infosteel</a>
                                 </li>
+                                <li>
+                                    <a href='https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html?nummer=0439.339.328&actionLu=Zoek'>KBO</a>
+                                </li>
+                                <li>
+                                    <a href='https://www.janssens.webcrafters.be/contact'>Contact</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -56,6 +62,7 @@ echo "
                             <p>Telefoon: +32 89 46 14 47</p>
                             <p>Email: info@janssensbvba.be</p>
                         </div>
+                        <div class='footer-copy-right'>Btw: 0439.339.328</div>
                     </div>
                 </div> 
             </div>
@@ -68,7 +75,7 @@ echo "
                 <div class='row d-flex justify-content-between align-items-center'>
                     <div class='col-xl-9 col-lg-8'>
                         <div class='footer-copy-right'>
-                            <p>&copy;Copyright $year <a href='https://webcrafters.be/'>Webcrafters</a></p>
+                            <p>&copy;Copyright $year <a href='https://webcrafters.be/'>Webcrafters</a> </p>
                         </div>
                     </div>
                     <div class='col-xl-3 col-lg-4'>
@@ -129,10 +136,9 @@ echo "
 <script src=' /js/plugins.js'></script>
 <script src=' /js/main.js'></script>
 
-<!-- Recaptcha -->
+<!-- Recaptcha 
 <script src='https://www.google.com/recaptcha/api.js?render=6LdaTtEpAAAAACoxUz3keIBpCvMK0zOsLKByiNNN'></script>
-
-
+-->
 </body>
 </html>
     ";

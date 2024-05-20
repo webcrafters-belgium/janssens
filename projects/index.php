@@ -1,7 +1,7 @@
 <?php
 $activePage = 'Projects';
 $pagetitle = "Janssens BVBA projecten";
-$keywords = "Alle projecten, bouw, watertoren, speciale structuren, alle vormen, alle maten, wandbekleding, dakbekleding";
+$keywords = "Recente projecten, Expertise in staalconstructies, Praktijk, Diverse bouwprojecten, Betrouwbare oplossingen, Hoogwaardige oplossingen";
 $description = "Bij Janssens BVBA kan je terecht voor alle vormen en maten structuur.";
 require $_SERVER['DOCUMENT_ROOT'] . '/ini.inc';
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php';

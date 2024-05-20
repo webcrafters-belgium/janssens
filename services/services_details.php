@@ -24,7 +24,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <div class="row">
                     <div class="col-xl-8 col-lg-9 col-md-12">
                         <div class="about-caption mb-50">
-                            <div class="section-tittle mb-35">
+                            <div class="section-title mb-35">
                                 <h2>The product management system that helps you understand.</h2>
                             </div>
                             <p class="mb-30">Productboard is the product management system that helps you understand what users need. You don't believe in the commonplace, and neither do we. We strive for absolute greatness - and our watches are the living illustration of that ideology. Are you ready to make your mark?</p>

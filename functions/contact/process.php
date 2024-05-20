@@ -1,56 +1,82 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verkrijg de formuliergegevens
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $subject = $_POST['select'];
-    $message = $_POST['message'];
-    $captcha = $_POST['g-recaptcha-response']; // reCAPTCHA-response
+error_reporting( E_ALL );
+ini_set( 'display_errors', 1 );
 
-    // Controleer of alle vereiste velden zijn ingevuld
-    if (!empty($name) && !empty($email) && !empty($message) && !empty($captcha)) {
-        // Controleer de reCAPTCHA-response
-        $secretKey = "6LdaTtEpAAAAABFx-vIDvdS9cBBASV_iSuPxySoY"; // Vervang dit door je eigen geheime sleutel
-        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
-        $responseKeys = json_decode($response, true);
+require_once( "{$_SERVER["DOCUMENT_ROOT"]}/ini.inc" );
 
-        // Controleer of de reCAPTCHA-response geldig is
-        if (intval($responseKeys["success"]) === 1) {
-            // Stel de ontvanger van de e-mail in
-            $to = 'matthi_gielen@hotmail.be';
+require( "{$_SERVER["DOCUMENT_ROOT"]}/classes/PHPMailer/PHPMailer.php" );
+require( "{$_SERVER["DOCUMENT_ROOT"]}/classes/PHPMailer/Exception.php" );
+require( "{$_SERVER["DOCUMENT_ROOT"]}/classes/PHPMailer/SMTP.php" );
 
-            // Stel het onderwerp en de inhoud van de e-mail in
-            $subject = 'Contactformulier ingediend door ' . $name;
-            $email_body = "Naam: $name\n";
-            $email_body .= "E-mail: $email\n";
-            $email_body .= "Telefoonnummer: $phone\n";
-            $email_body .= "Onderwerp: $subject\n";
-            $email_body .= "Bericht:\n$message";
 
-            // Stuur de e-mail
-            if (mail($to, $subject, $email_body)) {
-                // E-mail succesvol verzonden
-                http_response_code(200);
-                echo "Bericht succesvol verzonden!";
+use PHPMailer\classes\PHPMailer\PHPMailer;
+use PHPMailer\classes\PHPMailer\Exception;
+use PHPMailer\classes\PHPMailer\SMTP;
+
+if ( isset( $_POST['name'], $_POST['email'], $_POST['message'] ) ) {
+	$naam      = $_POST['name'];
+	$email     = $_POST['email'];
+	$onderwerp = $_POST['subject'];
+	$bericht   = $_POST['message'];
+
+	$mail = new PHPMailer( true );
+
+	// Server settings
+	$mail->isSMTP( true );
+	$mail->Host     = "mail.webcrafters.be";
+	$mail->SMTPAuth = true;
+	$mail->Username = "info@webcrafters.be";
+	$mail->Password = "DigiuSeppe2018___";
+
+	// Recipients
+	$mail->setFrom( "info@webcrafters.be", "webcrafters" );
+	$mail->addAddress( $email );
+	$mail->Subject = "Uw vraag is in behandeling";
+	$mail->isHTML( true );
+
+	$mail->Body    = "
+                <div style='display: flex; flex-direction: column; align-items: center; text-align: center;'>
+                    <h1 style='font-size: 24px; margin-bottom: 20px;'>Bedankt voor uw aanvraag!</h1>
+                    <p style='font-size: 16px;'>We hebben uw aanvraag goed ontvangen.</p>
+                    <p style='font-size: 16px;'>We proberen deze binnen 24 uur te behandelen.</p>
+                </div>";
+	$mail->AltBody = "Bedankt voor uw aanvraag! We hebben deze goed ontvangen en doen ons best om binnen 24 uur te reageren";
+	// Send the mail
+	$response = array();
+    try {
+        if ($mail->send()) {
+            $response['success'] = true;
+            $response['message'] = 'We hebben uw mail correct ontvangen.';
+
+            $toevoegenAanDb = "INSERT INTO `contact_aanvragen` (`name`, `email`, `subject`, `message`) VALUES (?, ?, ?, ?)";
+            $stmt = $conn->prepare($toevoegenAanDb);
+            $stmt->bind_param('ssss', $naam, $email, $onderwerp, $bericht);
+
+            if ($stmt->execute()) {
+                $response            = array();
+                $response['success'] = true;
+                $response['message'] = 'Bedankt voor het contacteren! We nemen binnenkort contact met je op.';
             } else {
-                // Kon e-mail niet verzenden
-                http_response_code(500);
-                echo "Er is een fout opgetreden bij het verzenden van het bericht.";
+                $response            = array();
+                $response['success'] = false;
+                $response['message'] = 'input in database gefaald.';
             }
+            $stmt->close();
         } else {
-            // De reCAPTCHA-response is ongeldig
-            http_response_code(400);
-            echo "reCAPTCHA-validatie mislukt. Probeer het opnieuw.";
+            $response['success'] = false;
+            $response['message'] = 'De mail is niet verzonden';
         }
-    } else {
-        // Niet alle vereiste velden zijn ingevuld
-        http_response_code(400);
-        echo "Vul alstublieft alle vereiste velden in.";
+    } catch (Exception $e) {
+        $response            = array();
+        $response['success'] = false;
+        $response['message'] = 'De mail kon niet verzonden worden';
     }
+
+    //}
 } else {
-    // Het verzoek is geen POST-verzoek
-    http_response_code(403);
-    echo "Het formulier kan alleen via een POST-verzoek worden ingediend.";
+	$response            = array();
+	$response['success'] = false;
+	$response['message'] = 'Niet alle vereiste velden zijn ingevuld';
 }
 
+echo json_encode( $response );

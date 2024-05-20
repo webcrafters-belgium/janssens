@@ -1,8 +1,8 @@
 <?php
 $activePage = 'Services';
 $pagetitle = 'Services';
-$keywords = 'Onze diensten';
-$description = 'Onze diensten';
+$keywords = 'Onze diensten, Uitgebreide diensten, Engineering, Productie, Conservering, Montage, Op maat gemaakte oplossingen, Specifieke eisen, Bouwproject';
+$description = 'Ontdek onze uitgebreide diensten, van engineering en productie tot conservering en montage. Leer hoe onze op maat gemaakte oplossingen voldoen aan de specifieke eisen van elk bouwproject.';
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 echo"
@@ -17,13 +17,22 @@ echo"
                     </div>
                 </div>
                 <div class='single-service'>
-                    <h2>Production</h2>
+                    <h2>Productie</h2>
+                    <div class='card-body'>
+                        <p></p>
+                    </div>
                 </div>
                 <div class='single-service border-1'>
                     <h2>Conservering</h2>
+                    <div class='card-body'>
+                        <p></p>
+                    </div>
                 </div>
                 <div class='single-service border-1 w-100 text-center'>
                     <h2>Montage</h2>
+                    <div class='card-body'>
+                        <p></p>
+                    </div>
                 </div>
         </div>
     </div>

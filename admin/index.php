@@ -24,14 +24,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <div class='row justify-content-between'>
                 <div class='col-xl-6 col-lg-6 col-md-10'>
                     <div class='about-caption mb-50'>
-                        <div class='section-tittle mb-35'>
+                        <div class='section-title mb-35'>
                             <span class='element'>Wat wil je doen?</span>
+                        </div>
+                        <div class="single-admin-option">
                             <h2>Projecten toevoegen</h2>
-                            <p>Janssens BVBA is een expert in staalconstructies, montage, dak- en wandbekleding. Met een
-                                rijke geschiedenis die teruggaat tot de jaren '50, bieden wij een breed scala aan
-                                diensten, van engineering en productie tot conservering en montage. Onze toewijding aan
-                                veiligheid en kwaliteit heeft ons een VCA*-certificaat opgeleverd, wat getuigt van onze
-                                inzet voor uitmuntendheid in alle aspecten van ons werk.
+                            <p>
+                                Voeg hier projecten toe, beheer projecten en/of verwijder projecten
                             </p>
                         </div>
                         <a href='/admin/projecten/add_project.php/' class='btn hero-btn' data-animation='fadeInLeft' data-delay='0.7s'>Project toevoegen
@@ -39,9 +38,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                         </a>
                     </div>
                     <div class='about-caption mb-50'>
-                        <div class='section-tittle mb-35'>
+                        <div class='single-admin-option'>
                             <h2>Personeel beheren</h2>
-                            <p>Bekijk hier de status van de programmeur, de werkplaatsen van de werknemers, de ziekte-dagen en veel meer!
+                            <p>Bekijk hier de status van de werknemers, de werkplaatsen, de ziekte-dagen en veel meer!
                             </p>
                         </div>
                         <a href='/admin/personeel/index.php/' class='btn hero-btn' data-animation='fadeInLeft' data-delay='0.7s'>Personeel beheren

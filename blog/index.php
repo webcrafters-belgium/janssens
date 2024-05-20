@@ -2,7 +2,7 @@
 $activePage = 'Blog';
 $pagetitle = "Janssens BVBA blogs, nieuws en sfeerbeelden";
 $keywords = "Janssens, blogs, sfeerbeelden, staalconstructies, industriebouw, dakbekleding, wandbekleding";
-$description = "Janssens BVBA blogs, nieuws en sfeerbeelden. Janssens, blogs, sfeerbeelden, staalconstructies, industriebouw, dakbekleding, wandbekleding";
+$description = "Janssens BVBA blogs, Blijf op de hoogte van de laatste ontwikkelingen in de bouwsector met ons informatieve blog. Ontvang waardevolle inzichten en tips over staalconstructies, montage en meer.";
 
 include $_SERVER['DOCUMENT_ROOT'] . '/ini.inc';
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php';

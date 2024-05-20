@@ -33,6 +33,7 @@ echo"
     <link rel='stylesheet' href='/css/header-and-preloader.css'>    
     <link rel='stylesheet' href='/css/hero.css'>    
     <link rel='stylesheet' href='/css/margins-and-paddings.css'>
+    <link rel='stylesheet' href='/css/selfmade-bootstrap.css'>
     <link rel='stylesheet' href='/assets/css/style.css'>
     
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>

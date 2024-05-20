@@ -1,39 +1,8 @@
 <?php
 $activePage = 'About';
 $pagetitle = 'Over Janssens BVBA';
-$keywords = "Ruimtevakwerk van metaal, IJzeren en stalen geraamtes voor geprefabriceerde gebouwen, 
-            Buisvormige geraamten voor gebouwen en bouwelementen, Insteekvloeren, 
-            Stalen constructies volgens de richtlijnen van de klant, Structurele componenten uit metaal voor de bouw, 
-            I-vormige metalen liggers en balken, U-vormige metalen liggers en balken, Honingraatliggers en balken van metaal, 
-            Gelaste liggers en balken van metaal, Kastvormige liggers van metaal, Boogvormige liggers van metaal, 
-            Tralieliggers van staal, Geconstrueerde liggers van plaatstaal, Uitschuifbare liggers van metaal, 
-            Metalen liggers en balken voor het wapenen van betonnen vloeren, Metalen gebinten, Metalen dakgebinten, 
-            Geprefabriceerde metalen gebouwen, Geprefabriceerde metalen bungalows, Geprefabriceerde metalen barakken, 
-            Geprefabriceerde keten voor bouwterreinen, Geprefabriceerde metalen hangars voor vliegtuigen, 
-            Metalen opslagloodsen, Geprefabriceerde metalen hallen met grote spanwijdte, Metalen garages, 
-            Metalen fietsenstallingen en fietsenrekken, Metalen gebouwen voor de landbouw, Metalen schuren, 
-            NACE-BEL (BE 2008): Vervaardiging van metalen constructiewerken en delen daarvan (25110), 
-            NACE Rev.2 (EU 2008): Vervaardiging van metalen constructiewerken en delen daarvan (2511), 
-            ISIC 4 (WORLD): Manufacture of structural metal products (2511), Metalen vloeren, 
-            IJzeren vloeren, Stalen vloeren, Vloeren van roestvrij staal, Aluminium vloeren, 
-            Vloeren van lichte legeringen, Vloeren van metalen roosterwerk, Verhoogde metalen vloeren, 
-            Niet-structurele metalen constructies voor wanden en gevels, Vliesgevels van aluminium en aluminiumlegeringen, 
-            Wandbekleding van aluminium, Niet-structurele metalen constructies voor daken en bekledingen, 
-            Dakbedekking van bladmetaal, IJzeren dakranden en dakgoten, Stalen dakranden en dakgoten, 
-            Zinken dakranden en dakgoten, Hekken, traliewerk, omheiningen, metalen, Metalen geraamten voor rasterwerk, 
-            Trap en trap uitrusting, metaal, IJzeren trapleuningen, Metalen trappen, Metalen wenteltrappen, 
-            Metalen traptreden en trapneusprofielen, Balustrades, leuningen en beveiligingen, metaal, 
-            Metalen relingen, Deuren, metaal, Stalen deuren, Metalen kanteldeuren, Metalen schuifdeuren, 
-            Metalen vouwdeuren, Metalen garagedeuren, garagepoorten, Metalen deuren voor transformatoren, 
-            Metalen deuren voor hangars en opslagloodsen, Metalen binnendeuren voor niet-industrieel gebruik, 
-            Nagels, spijkers, spikes en nietjes, metaal, door het gebruik, Spijkers en beugels voor goten, 
-            Vezelcementproducten, Producten van vezelcement voor het opvangen en afvoeren van regenwater, 
-            Mechanische constructie diensten, Mechanische constructies van installaties en machines, 
-            machinebouw, Aannemers voor dakbedekking (dakwerken) en muurbekleding, 
-            Aannemers voor bedaking met allerlei materialen, 
-            Aannemers voor bedaking van industriële gebouwen, 
-            Aannemers voor bekleden van buitenwanden";
-$description = "Kwaliteit is niet onze enige standaard, het zijn onze mensen die het verschil maken";
+$keywords = "Janssens BVBA, 70 jaar, Staalconstructies, Montage, Dakbekleding, Wandbekleding, Toewijding, Kwaliteit, Veiligheid, Innovatie";
+$description = "Over ons: Ontdek hoe Janssens BVBA al meer dan 70 jaar uitblinkt in staalconstructies, montage, dak- en wandbekleding. Lees meer over onze toewijding aan kwaliteit, veiligheid en innovatie.";
 require $_SERVER['DOCUMENT_ROOT'] . '/ini.inc';
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 echo"
@@ -60,7 +29,7 @@ echo"
                 <div class='col-xl-6 col-lg-6 col-md-10'>
                     <div class='about-caption mb-50'>
                         <!-- Section Tittle -->
-                        <div class='section-tittle mb-35'>
+                        <div class='section-title mb-35'>
                             <span class='element'>Over ons</span>
                             <h2>Kwaliteit is niet onze enige standaard</h2>
                         </div>
@@ -249,7 +218,7 @@ echo"
         <div class='container'>
             <div class='row'>
                 <div class='col-lg-4 col-md-6'>
-                    <div class='section-tittle mb-100'>
+                    <div class='section-title mb-100'>
                         <span class='element'>Blogs</span>
                         <h2>Nieuws & Media center</h2>
                         <p></p>
