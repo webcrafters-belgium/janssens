@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c474d664-26a4-4490-af51-d5298f5a646c" name="HOMESERVER-janssens">
+        <fileTransfer rootFolder="/sites/_default/htdocs" accessType="SFTP" host="192.168.128.240" port="22" sshConfigId="8d3c9fc3-0963-467b-a89d-f56080f279d1" sshConfig="matthias@192.168.128.240:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="e1160887-2ba2-426b-94fd-c5158bcbe0fe" name="homeserverftp" url="http://81.242.160.234">
+        <fileTransfer rootFolder="/htdocs" host="81.242.160.234" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="cccc25ea-7c50-4afe-b361-71a4bb4cfa96" name="webcraftersJanssens" url="http://webcrafters.be">
+        <fileTransfer rootFolder="/subdomains/janssens/htdocs" host="webcrafters.be" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

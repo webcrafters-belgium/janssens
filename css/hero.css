@@ -1,0 +1,295 @@
+/* hero part */
+.hero-area {
+  margin-top: -1px;
+  background-image: url(/img/hero/h1_hero.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero-area .hero__caption {
+  background: none;
+  overflow: hidden;
+  padding: 5em;
+  border-radius: 1em;
+  /* line 328, _common.scss */
+}
+.hero-area .hero__caption h1 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .hero-area .hero__caption h1 {
+    font-size: 35px;
+    line-height: 1.4;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero-area .hero__caption h1 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+}
+.hero-area .hero__caption .text-janssens {
+  font-size: 32px;
+  font-family: Muli, sans-serif;
+  background: -webkit-linear-gradient(black, #0091C0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: none;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 29px;
+}
+@media screen and (min-width: 800px) {
+  .hero-area .hero__caption .text-janssens {
+    font-size: 70px;
+  }
+}
+.hero-area .hero__caption p {
+  color: black;
+  font-size: 27px;
+  font-family: "Muli", sans-serif;
+  margin-bottom: 50px;
+}
+.hero-area .hero__caption .hero-btn {
+  padding: 17px 65px 17px 31px;
+}
+.hero-area .hero__caption span {
+  font-weight: 800;
+  display: block;
+}
+@media screen and (min-width: 800px) {
+  .hero-area .hero__caption {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* line 1, _h1-hero.scss */
+.slider-height {
+  height: 765px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .slider-height {
+    height: 765px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .slider-height {
+    height: 500px;
+  }
+}
+@media (max-width: 575px) {
+  .slider-height {
+    height: 500px;
+  }
+}
+
+/* line 18, _h1-hero.scss */
+.slider-height2 {
+  height: 400px;
+  background-size: cover;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .slider-height2 {
+    height: 260px;
+  }
+}
+@media (max-width: 575px) {
+  .slider-height2 {
+    height: 260px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 88, _h1-hero.scss */
+  .hero-area .hero__caption p {
+    padding-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  /* line 88, _h1-hero.scss */
+  .hero-area .hero__caption p {
+    padding-right: 0;
+    font-size: 15px;
+  }
+}
+/* line 106, _h1-hero.scss */
+.hero-area .video-icon {
+  position: absolute;
+  right: 160px;
+  top: 50%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 106, _h1-hero.scss */
+  .hero-area .video-icon {
+    right: 48px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 106, _h1-hero.scss */
+  .hero-area .video-icon {
+    right: 82px;
+  }
+}
+@media (max-width: 575px) {
+  /* line 106, _h1-hero.scss */
+  .hero-area .video-icon {
+    right: 27px;
+    bottom: 27px;
+    top: unset;
+  }
+}
+/* line 124, _h1-hero.scss */
+.hero-area .video-icon a {
+  background: #fff;
+  color: #0091C0;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+}
+
+/* line 133, _h1-hero.scss */
+.hero-area .video-icon a::after {
+  position: absolute;
+  border: 51px solid rgba(255, 255, 255, 0.2);
+  content: "";
+  border-radius: 50%;
+  left: -20px;
+  top: -21px;
+  right: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 124, _h1-hero.scss */
+  .hero-area .video-icon a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 575px) {
+  /* line 124, _h1-hero.scss */
+  .hero-area .video-icon a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+/* line 154, _h1-hero.scss */
+.hero-area .video-icon a i {
+  font-size: 20px;
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+  right: -2px;
+  top: 2px;
+}
+
+/* line 164, _h1-hero.scss */
+.hero-area .video-icon a.btn-icon {
+  position: relative;
+  /* Animations */
+  /* End Animated */
+}
+
+/* line 166, _h1-hero.scss */
+.hero-area .video-icon a.btn-icon::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  border-radius: inherit;
+  border: 1px solid #fff;
+  -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
+  animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
+}
+
+@-webkit-keyframes btnIconRipple {
+  0% {
+    border-width: 4px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    border-width: 1px;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  80% {
+    border-width: 1px;
+    -webkit-transform: scale(1.9);
+    transform: scale(1.9);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 198, _h1-hero.scss */
+.hero-area .video-icon a.btn-icon:hover {
+  background: #0091C0;
+  color: #fff;
+}
+
+/* line 208, _h1-hero.scss */
+.hero-overly {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 211, _h1-hero.scss */
+.hero-overly::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(1, 10, 28, 0.3);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+/* line 227, _h1-hero.scss */
+.header-transparent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
+/* line 238, _h1-hero.scss */
+.hero-area2 .hero-cap h2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 238, _h1-hero.scss */
+  .hero-area2 .hero-cap h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 575px) {
+  /* line 238, _h1-hero.scss */
+  .hero-area2 .hero-cap h2 {
+    font-size: 27px;
+  }
+}
+
+/*# sourceMappingURL=hero.css.map */
